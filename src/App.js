@@ -1,25 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import RegistrationForm from "./components/RegistrationForm";
+import FormTabs from "./components/FormTabs";
+import {useState} from "react";
+import SignInForm from "./components/SignInForm";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [tab, setTab] = useState(1);
+
+    const changeTab = (num) => {
+        setTab(num)
+    }
+
+
+    return (
+        <div className="w-[603px] mt-20 mx-auto bg-white px-[52px] pt-[65px] pb-[50px] rounded-[30px]" >
+            <FormTabs tab={tab} changeTab={changeTab}/>
+            <RegistrationForm tab={tab}/>
+            <SignInForm tab={tab}/>
+        </div>
+    );
 }
 
 export default App;
