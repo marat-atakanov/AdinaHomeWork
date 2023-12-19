@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+a {
+  color: red;
+}
+
+.nav {
+  background: #000;
+  display: flex;
+  gap: 20px;
+}
+
+.active {
+  color: pink;
+  font-weight: 700;
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 60px;
+}
+
+footer {
+  background-color: #000000;
+}
+
+input {
+  color: #000;
+}
